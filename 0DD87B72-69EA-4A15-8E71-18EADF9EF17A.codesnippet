@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>xxBaseCell</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@interface MMHChangeAddressBaseCell : UITableViewCell
+
+@property (nonatomic, strong) MMHChangeAddressBaseData *baseData;
+
++ (void)registerCellForTabelView:(UITableView *)tabelView;
+
++ (NSString *)cellIdentifierWithModel:(MMHChangeAddressBaseData *)dataModel;
+
+@end
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0DD87B72-69EA-4A15-8E71-18EADF9EF17A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>xxBaseCell</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>xxBaseCell</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
