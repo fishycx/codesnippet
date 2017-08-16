@@ -9,9 +9,8 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    [[UIAlertView alertViewWithTitle:@"ceshi" message:@"ceshi" buttonTitles:@["ok"] callback:^(UIAlertView *alertView, NSInteger buttonIndex) {
-        
-    }] show];
+	<string>MMHAlertView *alerView  = [[MMHAlertView alloc] initWithTitle:@"" message:@"" configTitle:@"" cancleTitle:@""];
+[alerView show];
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>2C7C629D-FF5A-4FBC-BA1F-68853757810A</string>
