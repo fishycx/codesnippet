@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ssVC</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    //MARK: - life circle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setNavigationBar()
+        setSubviews()
+        addUIConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+    }
+    
+    //MARK: - private method
+    
+    fileprivate func setNavigationBar() {
+        customNaviBar.title = "提现"
+    }
+    
+    fileprivate func setSubviews() {
+        view.addSubview(tableView)
+    }
+    
+    fileprivate func addUIConstraints() {
+        tableView.snp.makeConstraints { (make) in
+            make.top.equalTo(navigationBarHeight)
+            make.left.right.bottom.equalTo(0)
+        }
+    }
+    
+    //MARK: - delegate
+    
+    //MARK: - event
+    
+    
+    //MARK: - getters
+    fileprivate lazy var tableView:UITableView = {
+        let view = UITableView(frame: self.view.bounds, style: .plain)
+        return view
+    }()
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0E8910C8-78EC-4922-83AA-F3622580618F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>ssVC</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ssVC</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
