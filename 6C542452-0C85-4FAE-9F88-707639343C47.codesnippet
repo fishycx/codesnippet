@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ssToolBar</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    fileprivate lazy var toolBar:UIToolbar = {
+        let cancelBtn = UIBarButtonItem.init(title: "取消", style:.done, target: self, action: #selector(cancel))
+        let confirmBtn = UIBarButtonItem.init(title: "确定", style:.done, target: self, action: #selector(confirmSelect))
+        let flexBtn = UIBarButtonItem.init(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let toolBar = UIToolbar.init(frame: CGRect(x: 0, y: 0, width: mmh_screen_width(), height: 44))
+        toolBar.tintColor = UIColor.white
+        confirmBtn.tintColor = MMHAppearance.blueColor();
+        cancelBtn.tintColor = MMHAppearance.blueColor();
+        if ((UIDevice.current.systemVersion as NSString).doubleValue) &gt; 10.0 {
+            let leftNegativeSpacer = UIBarButtonItem.init(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+            let rightNegativeSpacer = UIBarButtonItem.init(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+            leftNegativeSpacer.width = 15.0
+            rightNegativeSpacer.width = 15.0
+            toolBar.setItems([leftNegativeSpacer, cancelBtn, flexBtn, confirmBtn, rightNegativeSpacer], animated: true)
+        } else {
+            toolBar.setItems([cancelBtn, flexBtn, confirmBtn], animated: true)
+        }
+        return toolBar
+    }()
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>6C542452-0C85-4FAE-9F88-707639343C47</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>ssToolBar</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ssToolBar</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
