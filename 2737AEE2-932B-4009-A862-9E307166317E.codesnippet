@@ -3,27 +3,41 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ssImageView</string>
+	<string>ssBaseModel</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>//MARK: -lazy
-fileprivate lazy var productImageView:MMHImageView = {
-    let imageView = MMHImageView()
-    imageView.frame =  CGRect(x:0, y:0, width: 70, height: 70)
-    return imageView
-}()
+	<string>    enum HomeBaseModelType {
+        case topBanner
+        case entry
+        case onePit
+        case twoPits
+        case goodList
+        case blank
+        case brand
+    }
+    
+    init(data: Any?, dataType: HomeBaseModelType?, cellHeight:CGFloat?) {
+        super.init()
+        self.data = data
+        self.dataType = dataType ?? .blank
+        self.cellHeight = cellHeight ?? 0
+    }
+    
+    var data:Any?
+    var dataType:HomeBaseModelType = .blank
+    var cellHeight:CGFloat = 0
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D536D69E-E0D2-419D-BEA3-49C7C46209FE</string>
+	<string>2737AEE2-932B-4009-A862-9E307166317E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>ssImageView</string>
+	<string>ssBaseModel</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>ssImageView</string>
+	<string>ssBaseModel</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ssCollectionView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    fileprivate lazy var collectionView:UICollectionView = {
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.minimumInteritemSpacing = BBFloat(10)
+        flowLayout.minimumLineSpacing = BBFloat(8)
+        let itemWidth = (ScreenWidth - BBFloat(30))  * 0.5
+        flowLayout.itemSize = CGSize(width: itemWidth, height: BBFloat(265))
+        
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout)
+        collectionView.register(BBCategoryCollectionViewCell.self, forCellWithReuseIdentifier: BBCategoryCollectionViewCellID)
+        collectionView.backgroundColor = .clear
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.isScrollEnabled = false
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: BBFloat(10), bottom: 0, right: BBFloat(10))
+        return collectionView
+    }()
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CFC9F470-6D94-4844-A36C-1782F152490C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>ssCollectionView</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ssCollectionView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

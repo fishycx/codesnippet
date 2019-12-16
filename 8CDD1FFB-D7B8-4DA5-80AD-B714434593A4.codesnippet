@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    #if defined (DEBUG_FISH)
+	<string>    #if DEBUG
     
     #endif
 </string>

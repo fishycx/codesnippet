@@ -3,27 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ssImageView</string>
+	<string>ssTest</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>//MARK: -lazy
-fileprivate lazy var productImageView:MMHImageView = {
-    let imageView = MMHImageView()
-    imageView.frame =  CGRect(x:0, y:0, width: 70, height: 70)
-    return imageView
-}()
+	<string>    fileprivate func test() {
+        print("fish Test")
+    }
+
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D536D69E-E0D2-419D-BEA3-49C7C46209FE</string>
+	<string>B9D08710-3ACE-43DB-9146-94171A9DF3AF</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>ssImageView</string>
+	<string>ssTest</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>ssImageView</string>
+	<string>ssTest</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

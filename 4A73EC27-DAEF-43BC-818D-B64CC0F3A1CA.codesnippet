@@ -3,27 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ssImageView</string>
+	<string>ssModel</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>//MARK: -lazy
-fileprivate lazy var productImageView:MMHImageView = {
-    let imageView = MMHImageView()
-    imageView.frame =  CGRect(x:0, y:0, width: 70, height: 70)
-    return imageView
-}()
+	<string>class DailyExplsionModel: NSObject, BBCodable {
+    required override init() {}
+}
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D536D69E-E0D2-419D-BEA3-49C7C46209FE</string>
+	<string>4A73EC27-DAEF-43BC-818D-B64CC0F3A1CA</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>ssImageView</string>
+	<string>ssModel</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>ssImageView</string>
+	<string>ssModel</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -17,20 +17,9 @@
         addUIConstraints()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-    }
-    
     //MARK: - private method
-    
     fileprivate func setNavigationBar() {
-        customNaviBar.title = "提现"
+        navigationBarTitle = ""
     }
     
     fileprivate func setSubviews() {

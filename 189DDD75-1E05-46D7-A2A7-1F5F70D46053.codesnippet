@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ssBaseDataVC</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    //MARK: - life circle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setNavigationBar()
+        setSubviews()
+        addUIConstraints()
+        manager.test()
+        tableView.reloadData()
+    }
+    
+    //MARK: - private method
+    fileprivate func setNavigationBar() {
+        navigationBarTitle = "提现"
+        navigationBar.lineView.isHidden = true
+        setRightItems(items: [rightNaviBtn])
+    }
+    
+    fileprivate func setSubviews() {
+        view.addSubview(tableView)
+    }
+    
+    fileprivate func addUIConstraints() {
+        tableView.snp.makeConstraints { (make) in
+            make.top.equalTo(navigationBarHeight)
+            make.left.right.bottom.equalTo(0)
+        }
+    }
+    
+    //MARK: - event
+    @objc fileprivate func getCashRecord() {
+        let vc = GetCashDetailViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    //MARK: - getters
+    fileprivate lazy var tableView:UITableView = {
+        let view = UITableView(frame: self.view.bounds, style: .plain)
+        view.delegate = self
+        view.dataSource = self
+        view.separatorStyle = .none
+        GetCashBaseCell.registerCells(tableView: view)
+        view.backgroundColor = bgColor
+        return view
+    }()
+    
+    fileprivate lazy var rightNaviBtn:UIButton = {
+        let btn = UIButton(type: .custom)
+        btn.setTitle("提现记录", for: UIControl.State.normal)
+        btn.setTitleColor(text_black, for: .normal)
+        btn.titleLabel?.font = F4
+        let width = "提现记录".sizeWith(font: F4, maxWidth: 200).width + 2
+        btn.frame = CGRect(x:0, y:0, width: width, height: 14)
+        btn.alpha = 0.8
+        btn.addTarget(self, action: #selector(getCashRecord), for: UIControl.Event.touchUpInside)
+        return btn
+    }()
+    
+    fileprivate lazy var manager = GetCashDataManager()
+
+}
+
+extension GetCashViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+        return manager.dataSourceArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {
+        let model = manager.dataSourceArray[indexPath.row]
+        let cellID = GetCashBaseCell.cellID(dataModel: model)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! GetCashBaseCell
+        cell.dataModel = model
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -&gt; CGFloat {
+        let model = manager.dataSourceArray[indexPath.row]
+        return model.cellHeight
+    }
+    
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>189DDD75-1E05-46D7-A2A7-1F5F70D46053</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>ssBaseDataVC</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ssBaseDataVC</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
