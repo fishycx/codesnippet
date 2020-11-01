@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ssBtn</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    fileprivate lazy var saveBtn:YLButton = {
+        let view = YLButton(type: .custom)
+        view.space = YLFloat(5)
+        view.imagePosition = .right
+        view.addTarget(self, action: #selector(handleClick), for: .touchUpInside)
+        return view
+    }()
+    
+    @objc fileprivate func handleClick() {}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4948B12B-E5B3-4DDE-BAF5-D6D5FF3B16C8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>ssBtn</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ssBtn</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
