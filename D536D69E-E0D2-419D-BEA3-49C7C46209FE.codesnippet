@@ -9,10 +9,8 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>//MARK: -lazy
-fileprivate lazy var productImageView:MMHImageView = {
-    let imageView = MMHImageView()
-    imageView.frame =  CGRect(x:0, y:0, width: 70, height: 70)
+	<string>fileprivate lazy var productImageView:BBImageView = {
+    let imageView = BBImageView()
     return imageView
 }()
 </string>
